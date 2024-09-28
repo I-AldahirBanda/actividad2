@@ -47,20 +47,28 @@ public class Alumno {
 
     // Método principal para probar la clase
     public static void main(String[] args) {
-        // Datos de ejemplo
-        String nombre = "Juan Pérez";
-        int[] calificaciones = {85, 90, 78, 92, 88};
+        // Ejemplo 1
+        String nombre1 = "Aldahir Banda";
+        int[] calificaciones1 = {85, 90, 78, 92, 88};
+        Alumno alumno1 = new Alumno(nombre1, calificaciones1);
+        double promedio1 = alumno1.calcularPromedio();
+        char calificacionFinal1 = alumno1.obtenerCalificacionFinal(promedio1);
+        alumno1.imprimirResultados(promedio1, calificacionFinal1);
 
-        // Creación de un objeto de la clase Alumno
-        Alumno alumno = new Alumno(nombre, calificaciones);
+        // Ejemplo 2
+        String nombre2 = "Pavel Pardo";
+        int[] calificaciones2 = {60, 70, 65, 68, 72};
+        Alumno alumno2 = new Alumno(nombre2, calificaciones2);
+        double promedio2 = alumno2.calcularPromedio();
+        char calificacionFinal2 = alumno2.obtenerCalificacionFinal(promedio2);
+        alumno2.imprimirResultados(promedio2, calificacionFinal2);
 
-        // Calcular el promedio
-        double promedio = alumno.calcularPromedio();
-
-        // Obtener la calificación final
-        char calificacionFinal = alumno.obtenerCalificacionFinal(promedio);
-
-        // Imprimir los resultados
-        alumno.imprimirResultados(promedio, calificacionFinal);
+        // Ejemplo 3
+        String nombre3 = "Jose Jose (El triste)";
+        int[] calificaciones3 = {40, 50, 45, 55, 60};
+        Alumno alumno3 = new Alumno(nombre3, calificaciones3);
+        double promedio3 = alumno3.calcularPromedio();
+        char calificacionFinal3 = alumno3.obtenerCalificacionFinal(promedio3);
+        alumno3.imprimirResultados(promedio3, calificacionFinal3);
     }
 }
